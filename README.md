@@ -39,14 +39,11 @@ Contains all raw and/or processed CSV datasets used in the experiment.
 Ensures experiments remain self-contained and reproducible.
 
 ### 📓 `experiment.ipynb`
-
-> Jupyter Notebook containing:
-> - Data preprocessing  
-> - Model implementation (S-, T-, X-, R-, DR-, Z-learners)  
-> - Evaluation (PEHE, ATE error, AUQC)  
-> - Result visualization  
-> - Sensitivity analyses (if applicable)
-
----
+Jupyter Notebook containing:
+- Data preprocessing  
+- Model implementation (S-, T-, X-, R-, DR-, Z-learners)  
+- Evaluation (PEHE, ATE error, AUQC)  
+- Result visualization  
+- Sensitivity analyses (if applicable)
 
 This modular structure keeps experiments organized, reproducible, and easy to extend.
