@@ -3,7 +3,7 @@
 
 ## 📂 Repository Structure
 
-> The project is organized by experiment. Each experiment contains its own data and notebook to ensure modularity and reproducibility.
+The project is organized by experiment. Each experiment contains its own data and notebook to ensure modularity and reproducibility.
 
 ```
 .
@@ -24,7 +24,7 @@
 
 ## 🔬 Per Experiment Structure
 
-> Each experiment is fully self-contained and follows the structure below.
+Each experiment is fully self-contained and follows the structure below.
 
 ```
 Experiment/
@@ -35,8 +35,8 @@ Experiment/
 
 ### 📁 `data/`
 
-> Contains all raw and/or processed CSV datasets used in the experiment.  
-> Ensures experiments remain self-contained and reproducible.
+Contains all raw and/or processed CSV datasets used in the experiment.  
+Ensures experiments remain self-contained and reproducible.
 
 ### 📓 `experiment.ipynb`
 
@@ -49,4 +49,4 @@ Experiment/
 
 ---
 
-> This modular structure keeps experiments organized, reproducible, and easy to extend.
+This modular structure keeps experiments organized, reproducible, and easy to extend.
