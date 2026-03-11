@@ -7,17 +7,18 @@ The project is organized by experiment. Each experiment contains its own data an
 
 ```
 .
-├── Experiment_Name/
-│   ├── data/
-│   │   ├── dataset_1.csv
-│   │   ├── dataset_2.csv
-│   │   └── ...
-│   └── experiment.ipynb
-├── Experiment_Name_2/
-│   ├── data/
-│   │   └── ...
-│   └── experiment.ipynb
-└── README.md
+├── experiments/
+│   ├── Experiment_Name/
+│   │   ├── data/
+│   │   │   ├── dataset_1.csv
+│   │   │   ├── dataset_2.csv
+│   │   │   └── ...
+│   │   └── experiment.ipynb
+│   ├── Experiment_Name_2/
+│   │   ├── data/
+│   │   │   └── ...
+│   │   └── experiment.ipynb
+├── README.md
 ```
 
 ---
@@ -27,7 +28,7 @@ The project is organized by experiment. Each experiment contains its own data an
 Each experiment is fully self-contained and follows the structure below.
 
 ```
-Experiment/
+Experiment_Name/
 ├── data/
 │   └── (CSV files used in the experiment)
 └── experiment.ipynb
