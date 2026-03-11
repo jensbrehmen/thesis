@@ -7,15 +7,28 @@ The evaluated meta-learners include **S-, T-, X-, R-, DR-, and Z-learners**. The
 
 ## 🎯 Experimental Scope
 
-The experiments in this repository evaluate whether **TabPFN** can serve as an effective base learner within causal meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling. The analysis focuses on performance across different meta-learner formulations, benchmark datasets, and sample sizes, with particular attention to small- and medium-scale tabular settings.
+The experiments in this repository are organized to test **TabPFN as a base learner for causal meta-learners** under three complementary settings.
+
+First, we evaluate the models on **semi-synthetic causal benchmarks** with known treatment effects, including datasets such as **IHDP-100**, **Twins**, **News**, and **ACIC2016**. These experiments allow direct assessment of how accurately each method recovers heterogeneous treatment effects.
+
+Second, we evaluate the same methods on **real-world randomized controlled trial (RCT) data**, where treatment assignment is randomized but individual counterfactual outcomes are unobserved. In this setting, the focus shifts from direct error measurement to **treatment ranking and policy quality**, which is more relevant for practical uplift modeling.
+
+Third, we conduct a **sensitivity analysis** to study robustness under challenging data conditions, including **treatment imbalance**, **weak overlap**, and **confounding**. This is intended to assess whether the relative performance of TabPFN-based meta-learners persists when the learning problem becomes less favorable.
+
+Across these settings, the repository compares **TabPFN-based S-, T-, X-, R-, DR-, and Z-learners** against conventional baselines such as **linear models**, **LightGBM**, **Causal Forests**, and **CausalPFN**.
 
 ## 📊 Evaluation
 
-Model performance is assessed using task-appropriate metrics for causal effect estimation and uplift modeling, including:
-- **PEHE**
+Model performance is evaluated using metrics that match the data setting and the causal objective.
+
+For **semi-synthetic benchmarks**, where ground-truth treatment effects are available, we evaluate:
+- **root-PEHE**
 - **ATE error**
+
+For **real-world RCT experiments**, where the objective is treatment prioritization rather than direct recovery of unobserved individual effects, we evaluate:
 - **AUQC**
-- standard classification or regression metrics where relevant for base-learner tuning
+- **Top-$k$\% policy gain**
+- standard supervised metrics where relevant for base-model tuning
 
 ---
 
