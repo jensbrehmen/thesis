@@ -1,10 +1,6 @@
 # A Foundational Approach to Improve Causal Machine Learning and Uplift Modeling
 This repository contains the implementation and experimental evaluation for the thesis **“A Foundational Approach to Improve Causal Machine Learning and Uplift Modeling.”** The project studies **TabPFN** as a base learner within standard meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling.
 
-The evaluated meta-learners include **S-, T-, X-, R-, DR-, and Z-learners**. Their performance is benchmarked against established baselines, including **LightGBM**, **linear models**, **Causal Forests**, and **CausalPFN**, on **semi-synthetic** and **real-world randomized controlled trial (RCT)** datasets.
-
----
-
 ## 🎯 Experimental Scope
 
 The experiments in this repository are organized to test **TabPFN as a base learner for causal meta-learners** under three complementary settings.
