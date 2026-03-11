@@ -1,10 +1,27 @@
 # A Foundational Approach to Improve Causal Machine Learning and Uplift Modeling
-Implementation and evaluation of **TabPFN** as a base learner in meta-learner frameworks (S, T, X, R, DR, Z) for causal effect estimation and uplift modeling. Benchmarked on semi-synthetic and real-world RCT datasets against LightGBM, linear models, Causal Forests, and CausalPFN.
+This repository contains the implementation and experimental evaluation for the thesis **“A Foundational Approach to Improve Causal Machine Learning and Uplift Modeling.”** The project studies **TabPFN** as a base learner within standard meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling.
+
+The evaluated meta-learners include **S-, T-, X-, R-, DR-, and Z-learners**. Their performance is benchmarked against established baselines, including **LightGBM**, **linear models**, **Causal Forests**, and **CausalPFN**, on **semi-synthetic** and **real-world randomized controlled trial (RCT)** datasets.
+
+---
+
+## 🎯 Experimental Scope
+
+The experiments in this repository evaluate whether **TabPFN** can serve as an effective base learner within causal meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling. The analysis focuses on performance across different meta-learner formulations, benchmark datasets, and sample sizes, with particular attention to small- and medium-scale tabular settings.
+
+## 📊 Evaluation
+
+Model performance is assessed using task-appropriate metrics for causal effect estimation and uplift modeling, including:
+- **PEHE**
+- **ATE error**
+- **AUQC**
+- standard classification or regression metrics where relevant for base-learner tuning
+
+---
 
 ## 📂 Repository Structure
 
-The project is organized by experiment. Each experiment contains its own data and notebook to ensure modularity and reproducibility.
-
+The repository is organized by experiment. Each experiment contains its own data and notebook to keep the workflow modular, transparent, and reproducible.
 ```
 .
 ├── experiments/
@@ -14,36 +31,18 @@ The project is organized by experiment. Each experiment contains its own data an
 │   │   │   ├── dataset_2.csv
 │   │   │   └── ...
 │   │   └── experiment.ipynb
-│   ├── Experiment_Name_2/
-│   │   ├── data/
-│   │   │   └── ...
-│   │   └── experiment.ipynb
 ├── README.md
-```
-
----
-
-## 🔬 Per Experiment Structure
-
-Each experiment is fully self-contained and follows the structure below.
-
-```
-Experiment_Name/
-├── data/
-│   └── (CSV files used in the experiment)
-└── experiment.ipynb
 ```
 
 ### 📁 `data/`
 
-Contains all raw and/or processed CSV datasets used in the experiment.  
-Ensures experiments remain self-contained and reproducible.
+Contains the datasets used in the corresponding experiment. Depending on the study, this may include raw input data, processed data, train/test splits, or semi-synthetic benchmark data.
 
 ### 📓 `experiment.ipynb`
-Jupyter Notebook containing:
+Jupyter notebook containing the full experimental pipeline, including:
 - Data preprocessing  
 - Model implementation (S-, T-, X-, R-, DR-, Z-learners)  
-- Evaluation (PEHE, ATE error, AUQC)  
+- Evaluation (PEHE, ATE error, AUQC, )  
 - Result visualization  
 - Sensitivity analyses (if applicable)
 
