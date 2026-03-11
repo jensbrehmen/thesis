@@ -26,8 +26,6 @@ For **real-world RCT experiments**, where the objective is treatment prioritizat
 - **Top-$k$\% policy gain**
 - standard supervised metrics where relevant for base-model tuning
 
----
-
 ## 📂 Repository Structure
 
 The repository is organized by experiment. Each experiment contains its own data and notebook to keep the workflow modular, transparent, and reproducible.
