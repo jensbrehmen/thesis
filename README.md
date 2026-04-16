@@ -1,17 +1,17 @@
 # Improving Causal Machine Learning with Tabular Foundation Models
-This repository contains the implementation and experimental evaluation for the thesis _“A Foundational Approach to Improve Causal Machine Learning and Uplift Modeling.”_ The project studies **TabPFN** as a base learner within standard meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling.
+This repository contains the implementation and experimental evaluation for the thesis _”Improving Causal Machine Learning using Tabular Foundation Models.”_ The project studies **Tabular Foundation Models (TFMs)** as base learners within meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling. The TFMs evaluated include **TabPFN** and **TabICL** as concrete instances.
 
 ## 🎯 Experimental Scope
 
-The experiments in this repository are organized to test **TabPFN as a base learner for causal meta-learners** under three complementary settings.
+The experiments in this repository are organized to test **TFM-based meta-learners** under three complementary settings.
 
-First, we evaluate the models on **semi-synthetic causal benchmarks** with known treatment effects, including datasets such as **IHDP-100**, **Twins**, **News**, and **ACIC2016**. These experiments allow direct assessment of how accurately each method recovers heterogeneous treatment effects.
+First, we evaluate the models on **semi-synthetic causal benchmarks** with known treatment effects. For this we use **IHDP-100** and **ACIC2016**.
 
-Second, we evaluate the same methods on **real-world randomized controlled trial (RCT) data**, where treatment assignment is randomized but individual counterfactual outcomes are unobserved. In this setting, the focus shifts from direct error measurement to **treatment ranking and policy quality**, which is more relevant for practical uplift modeling.
+Second, we conduct a **sensitivity analysis** to study robustness under challenging data conditions, including **treatment imbalance**, **weak overlap**, and **confounding**. This is intended to assess whether the relative performance of TFM-based meta-learners persists when the learning problem becomes less favorable.
 
-Third, we conduct a **sensitivity analysis** to study robustness under challenging data conditions, including **treatment imbalance**, **weak overlap**, and **confounding**. This is intended to assess whether the relative performance of TabPFN-based meta-learners persists when the learning problem becomes less favorable.
+Third, we evaluate the same methods on **real-world randomized controlled trial (RCT) data**, where treatment assignment is randomized but individual counterfactual outcomes are unobserved. In this setting, the focus shifts from direct error measurement to **treatment ranking and policy quality**, which is more relevant for uplift modeling. The RCT experiments cover three datasets: **NSW-RE74** (labor economics), **Hillstrom MineThatData** (email marketing), and **ACTG 175** (clinical trials).
 
-Across these settings, the repository compares **TabPFN-based S-, T-, X-, R-, DR-, and Z-learners** against conventional baselines such as **linear models**, **LightGBM**, **Causal Forests**, and **CausalPFN**.
+Across these settings, the repository compares **TFM-based S-, T-, X-, R-, and DR-learners** (using TabPFN and TabICL as base learners) against conventional baselines such as **linear models**, **LightGBM**, **Causal Forests**, and **CausalPFN**.
 
 ## 📊 Evaluation
 
@@ -47,8 +47,8 @@ Contains the datasets used in the corresponding experiment. Depending on the stu
 
 ### 📓 `experiment.ipynb`
 Jupyter notebook containing the full experimental pipeline, including:
-- Data preprocessing  
-- Model implementation (S-, T-, X-, R-, DR-, Z-learners)  
+- Data preprocessing & loading  
+- Model implementation (S-, T-, X-, R-, and DR-learner)  
 - Evaluation (PEHE, ATE error, AUQC, )  
 - Result visualization  
 - Sensitivity analyses (if applicable)
