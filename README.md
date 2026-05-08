@@ -1,4 +1,4 @@
-# Improving Causal Machine Learning with Tabular Foundation Models
+# Benchmarking Tabular Foundation Models for Causal Machine Learning
 This repository contains the implementation and experimental evaluation for the thesis _”Improving Causal Machine Learning using Tabular Foundation Models.”_ The project studies **Tabular Foundation Models (TFMs)** as base learners within meta-learner frameworks for **conditional average treatment effect (CATE)** estimation and uplift modeling. The TFMs evaluated include **TabPFN** and **TabICL** as concrete instances.
 
 ## 🎯 Experimental Scope
